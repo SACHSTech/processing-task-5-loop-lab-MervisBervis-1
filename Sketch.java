@@ -71,21 +71,25 @@ public class Sketch extends PApplet {
    * draws the bottom left section
    */
   public void draw_section1(){
+
+    // Set integers
     int intX = 0;
     int intY = 0;
 
+    // Create a grid of white squares
     for(int intRow = 0; intRow < 30; intRow++){
       for(int intColumn = 0; intColumn < 30; intColumn++){
-        intX = 3 + 0;  //Instead of zero, calculate the proper intX location using 'intRow'
-        intY = 300 + 3 + 0; //Instead of zero, calculate the proper intY location using 'intColumn'
+        intX = 3 + intRow*10;  //Instead of zero, calculate the proper intX location using 'intRow'
+        intY = 300 + 3 + intColumn*10; //Instead of zero, calculate the proper intY location using 'intColumn'
 
         fill(255);
         noStroke();
-        rect(intX, intY, 5, 5);
-
+        rect(intX, intY, 5,5);
+   
+          }
+        }
       }
-    }
-  }
+    
 
   /**
    * Use the modulus operator and an if statement to select the color
@@ -93,7 +97,27 @@ public class Sketch extends PApplet {
    */
   public void draw_section2(){
 
-  }
+    // Set Integers
+    int intX = 0;
+    int intY = 0;
+
+  // Code to create alternating columns of black and white squares
+  for(int intRow = 0; intRow < 30; intRow++){
+    for(int intColumn = 0; intColumn < 30; intColumn++){
+      intX = 3 + 300 + intRow*10;
+      intY = 300 + 3 + intColumn*10;
+
+      if (intRow % 2 == 0){
+
+        fill(0);}
+
+      else fill(255);
+        noStroke();
+        rect(intX, intY, 5,5); 
+
+      }
+     }
+   } 
 
   /**
    * Use the modulus operator and an if/else statement to select the color.
@@ -101,32 +125,139 @@ public class Sketch extends PApplet {
    */
   public void draw_section3(){
 
-  }
+    // Set Integers
+    int intX = 0;
+    int intY = 0;
 
+  // Code to create alternating rows of black and white squares
+  for(int intColumn = 0; intColumn < 30; intColumn++){
+    for(int intRow = 0; intRow < 30; intRow++){
+      intX = 3 + 600 + intRow*10;
+      intY = 300 + 3 + intColumn*10;
+
+      if (intColumn % 2 == 0){
+
+        fill(0);}
+
+      else fill(255);
+        noStroke();
+        rect(intX, intY, 5,5); 
+
+    }
+  }
+} 
+    
+    
   /**
    * Use the modulus operator and just one 'if' statement to select the color.
    */
   public void draw_section4(){
 
+  // Set Integers
+  int intX = 0;
+  int intY = 0;
+
+  // Code to create a white square in every other row and column of black squares
+  for(int intRow = 0; intRow < 30; intRow++){
+    for(int intColumn = 0; intColumn < 30; intColumn++){
+      intX = 3 + 900 + intRow*10;
+      intY = 300 + 3 + intColumn*10;
+
+      if (intRow % 2 == 0 || intColumn % 2 == 0){
+
+        fill(0);}
+
+      else fill(255);
+        noStroke();
+        rect(intX, intY, 5,5); 
+    }
   }
+}
 
   /**
    * Do NOT use 'if' statements to complete 5-8. Manipulate the loops instead
    */
   public void draw_section5(){
 
+    // Set Integers
+    int intX = 0;
+    int intY = 0;
+
+  // Code to create a right angle triangle with white squares on the bottom right of the box
+  for(int intRow = 0; intRow <30; intRow++){
+    for(int intColumn = 30 - intRow; intColumn < 30; intColumn++){
+      intX = 3 + intRow * 10;
+      intY = 3 + intColumn * 10;
+
+
+    fill(255);
+    noStroke();
+    rect(intX, intY, 5, 5);
+      }
+    }
   }
+  
+ 
 
   public void draw_section6(){
 
-  }
+    // Set Integers
+    int intX = 0;
+    int intY = 0;
 
+  // Code to create a right angle triangle with white squares on the bottom left of the box
+  for  (int intRow = 0; intRow <30; intRow++){
+    for(int intColumn = intRow; intColumn < 30; intColumn++){
+      intX = 300 + 3 + intRow * 10;
+      intY = 3 + intColumn * 10;
+
+      fill(255);
+      noStroke();
+      rect(intX, intY, 5, 5);
+      }
+    }
+  }
+  
   public void draw_section7(){
 
+  // Set Integers
+  int intX = 0;
+  int intY = 0;
+
+// Code to create a right angle triangle with white squares on the top left of the box
+for (int intColumn = 0; intColumn < 30; intColumn++){
+  for(int intRow = 0; intRow < 30 - intColumn; intRow++){
+    intX = 600 + 3 + intRow * 10;
+    intY = 3 + intColumn * 10;
+
+    fill(255);
+    noStroke();
+    rect(intX, intY, 5, 5);
+      }
+    }
   }
+  
+
+  
   
   public void draw_section8(){
 
+  // Set Integers
+  int intX = 0;
+  int intY = 0;
+
+// Code to create a right angle triangle with white squares on the top right of the box
+  for  (int intColumn = 0; intColumn < 30; intColumn++){
+    for(int intRow = intColumn; intRow < 30; intRow++){
+      intX = 900 + 3 + intRow * 10;
+      intY = 3 + intColumn * 10;
+
+      fill(255);
+      noStroke();
+      rect(intX, intY, 5, 5);
+      }
+    }
+  }
   }
 
 
@@ -134,4 +265,4 @@ public class Sketch extends PApplet {
 
 
 
-}
+ 
